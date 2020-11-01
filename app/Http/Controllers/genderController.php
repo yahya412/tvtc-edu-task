@@ -16,13 +16,15 @@ class genderController extends Controller
        }
    }
    function updateGender(Request $request){
-       
+       $request->validate([
+           'gender'=> 'required'
+       ]);
        $user = Auth::user();
        $user->update([
            'gender'=> $request->gender
            
        ]);
-       dd($user);
+//       dd($user);
        /*Session::flash('alert-class','gender updated successfuly');
        $request->session()->flash('status', 'Task was successful!');*/
        return view('dashboard');

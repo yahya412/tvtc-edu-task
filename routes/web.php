@@ -18,9 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+Route::middleware(['auth:sanctum', 'verified','gender'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
 Route::get('gender',[genderController::class,'editGender']);
-Route::put('gender',[genderController::class,'updateGender'])->name('update-gender');
+Route::post('gender',[genderController::class,'updateGender'])->name('update-gender');
+Route::view('gender','gender');
