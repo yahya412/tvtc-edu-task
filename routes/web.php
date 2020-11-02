@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\genderController;
-
+use App\Http\Controllers\postController;
+use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +27,10 @@ Route::middleware(['auth:sanctum', 'verified','gender'])->get('/dashboard', func
 Route::get('gender',[genderController::class,'editGender']);
 Route::post('gender',[genderController::class,'updateGender'])->name('update-gender');
 Route::view('gender','gender');
+Route::resource('posts', postController::class)->except([
+    'create', 'store', 'update', 'destroy'
+]);
+
+
+Route::get('login/facebook', [FacebookController::class, 'redirectToProvider']);
+Route::get('login/facebook/callback', [FacebookController::class, 'handleProviderCallback']);
