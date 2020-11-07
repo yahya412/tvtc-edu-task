@@ -5,6 +5,7 @@ use App\Http\Controllers\genderController;
 use App\Http\Controllers\postController;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\LoginController;
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +32,9 @@ Route::resource('posts', postController::class)->except([
     'create', 'store', 'update', 'destroy'
 ]);
 
-
+Route::get('new',function(){
+    
+    return view('new');
+});
 Route::get('login/facebook', [FacebookController::class, 'redirectToProvider']);
 Route::get('login/facebook/callback', [FacebookController::class, 'handleProviderCallback']);
