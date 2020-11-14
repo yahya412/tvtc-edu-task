@@ -18,7 +18,7 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::middleware(['auth:sanctum', 'verified','gender'])->get('/dashboard', function () {

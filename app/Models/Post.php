@@ -20,7 +20,7 @@ class Post extends Model
         return $this->belongsTo('App\Models\User');
     }
 
-//    public function creatro(){
-//        return $this->belongsTo('App\Models\User');
-//    }
+    public function creator(){
+        return $this->belongsTo('App\Models\User','user_id');
+    }
     }
