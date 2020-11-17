@@ -71,15 +71,23 @@
 <div class="container-fluid bg-green-color">
     <div class="row">
         <div class="container">
-            <div class="row">
+             <div class="row">
                 <div class="subscribe scrollme">
                     <div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
                         <h4 class="subscribe-title">Email Newsletters!</h4>
-                        <form class="subscribe-form" method="post" action="">
-                            <input class="email input-standard-grey input-white" name="email" required="required" placeholder="Your Email Address" type="email">
+                        <form class="subscribe-form" method="POST" action={{ route('subscribe') }}>
+                            @csrf
+                              <input class=" @error('email-error') is-invalid @enderror email input-standard-grey input-white" name="email"  placeholder="Your Email Address" type="email">
                             <button class="subscr-btn">subscribe
                                 <span class="semicircle--right"></span>
                             </button>
+                            @error('email-error')
+                            <div class="alert alert-danger">
+                                {{$message}}
+                               
+                            </div>
+                                 
+                            @enderror
                         </form>
                         <div class="sub-title">Sign up for new Blog content, updates, surveys & offers.</div>
 
