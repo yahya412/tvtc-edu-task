@@ -19,6 +19,17 @@
   margin-right: auto;
   margin-left: auto; }
 
+.classfied-body{
+    
+   padding-top: 40px;
+  padding-bottom: 20px;
+    margin-top: 40px;
+    max-width: auto;
+    //You can move the menu to the left, to the center or to the right
+    
+   
+}
+
 @media (min-width: 768px) {
   .container {
     width: 710px; } }

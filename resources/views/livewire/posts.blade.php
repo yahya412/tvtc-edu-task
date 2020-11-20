@@ -14,14 +14,17 @@
 
 
     <form class="my-4 flex" wire:submit.prevent="addPost">
-             <input type="text" class="w-full rounded border shadow p-2 mr-2 my-2" placeholder="Title..."
+        <div class="w-full">     
+        <input type="text" class="w-48 rounded border shadow p-2 mr-2 my-2" placeholder="Title..."
                wire:model.debounce.500ms="titlePost">
+             
         <input type="text" class="w-full rounded border shadow p-2 mr-2 my-2" placeholder="Post Body."
                wire:model.debounce.500ms="bodyPost">
-
+           
         <div class="py-2">
             <button type="submit" class="p-2 bg-blue-500 w-20 rounded shadow text-white">Add</button>
-        </div>
+         </div>
+         </div>
     </form>
     @foreach($posts as $post)
     <div class="rounded border shadow p-3 my-2">
