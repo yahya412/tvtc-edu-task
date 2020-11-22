@@ -71,11 +71,12 @@
         <!--Start of Greeting post-->
     <dir class="container">
         
-        <img src="/app/img/amani.jpeg" width="240" height="50" alt="post" class="text-wrap2">
+        <img src="/app/img/amani.jpeg" width="260" height="50" alt="post" class="text-wrap2">
         <h2 class="h2styles">يسرني دعوتكم لحضور زواجي</h2>
         <p class="h2styles">
            تعليقاتكم تعني لي الكثير .
-           الرجاء التسجيل
+           الرجاء <a href="{{ route('register') }}">التسجيل</a>
+           <a href="{{ route('login') }}">او تسجيل الدخول</a>
         </p>
     </dir>
 
