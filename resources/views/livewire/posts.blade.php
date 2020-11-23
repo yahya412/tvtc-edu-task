@@ -14,7 +14,7 @@
 
 
     <form class="my-4 flex" wire:submit.prevent="addPost">
-        <div class="w-full col-xs-12">     
+        <div class="w-full">     
         <input type="text" class="w-48 rounded border shadow p-2 mr-2 my-2" placeholder="Title..."
                wire:model.debounce.500ms="titlePost">
              
@@ -27,7 +27,7 @@
          </div>
     </form>
     @foreach($posts as $post)
-    <div class="rounded border shadow p-3 my-2 col-xs-12">
+    <div class="rounded border shadow p-3 my-2">
         <div class="flex justify-between my-2">
             <div class="flex">
                 <p class="font-bold text-lg">{{$post->title}} </p>
@@ -37,14 +37,14 @@
                 <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">{{ Carbon\Carbon::parse($post->created_at)->diffForHumans() }}
                 </p>
             </div>
-            <div class=" justify-end">
-            <i class="far fa-edit text-red-200 hover:text-green-600 cursor-pointer"
+            <div class="justify-end">
+                <i class="far fa-edit text-red-200 hover:text-green-600 cursor-pointer"
                wire:click="edit({{$post->id}})" ></i>
 
-            <i class="fas fa-times text-red-200 hover:text-green-600 cursor-pointer"
+            <i class="fas fa-times text-red-200 hover:text-red-600 cursor-pointer"
                wire:click="remove({{$post->id}})"></i>
-        </div>
             </div>
+        </div>
         <p class="text-gray-800">{{$post->body}}</p>
 
     </div>
