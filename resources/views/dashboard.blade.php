@@ -22,7 +22,7 @@
 
 
 
-    <div class="w-10/12 my-10 ">
+    <div class="w-10/12 my-10 flex">
         <div class="w-5/12 rounded border p-2 col-xs-12">
 
             @if(Auth::user()->gender == "1")
