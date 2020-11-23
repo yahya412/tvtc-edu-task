@@ -37,10 +37,10 @@
                 <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">{{ Carbon\Carbon::parse($post->created_at)->diffForHumans() }}
                 </p>
             </div>
-            <i class="fal fa-edit text-red-200 hover:text-green-600 cursor-pointer"
+            <i class="far fa-edit text-red-200 hover:text-green-600 cursor-pointer"
                wire:click="edit({{$post->id}})" ></i>
 
-            <i class="fas fa-times text-red-200 hover:text-red-600 cursor-pointer"
+            <i class="fas fa-times text-red-200 hover:text-green-600 cursor-pointer"
                wire:click="remove({{$post->id}})"></i>
         </div>
         <p class="text-gray-800">{{$post->body}}</p>
