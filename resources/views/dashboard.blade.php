@@ -22,8 +22,9 @@
 
 
 
-    <div class="w-10/12 my-10 flex">
-        <div class="w-5/12 rounded border p-2 col-xs-12">
+    <div class="raw">
+        
+        <div class="col-xs-12 col-sm-6 col-md-6">
 
             @if(Auth::user()->gender == "1")
             <h2>Men only</h2>
@@ -31,8 +32,10 @@
             @elseif(Auth::user()->gender == "2")
             <h2>Women only</h2>
             <p class="div-women">Dear Ladies, I feel glad to call you people my family. Getting to celebrate this unique day with you is nothing but a pure blessing from the Lord. Happy family day.</p>
-            @endif</div>
-        <div class="w-7/12 mx-2 col-xs-12 rounded border p-2">
+            @endif
+        </div>
+        
+        <div class="col-xs-12 col-sm-6 col-md-6">
             <livewire:posts />
         </div>
     </div>
