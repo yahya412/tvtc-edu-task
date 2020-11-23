@@ -14,7 +14,7 @@
 
 
     <form class="my-4 flex" wire:submit.prevent="addPost">
-        <div class="w-full sm\:w-full">     
+        <div class="w-full col-xs-12">     
         <input type="text" class="w-48 rounded border shadow p-2 mr-2 my-2" placeholder="Title..."
                wire:model.debounce.500ms="titlePost">
              
@@ -27,7 +27,7 @@
          </div>
     </form>
     @foreach($posts as $post)
-    <div class="rounded border shadow p-3 my-2 sm\:w-full">
+    <div class="rounded border shadow p-3 my-2 col-xs-12">
         <div class="flex justify-between my-2">
             <div class="flex">
                 <p class="font-bold text-lg">{{$post->title}} </p>
