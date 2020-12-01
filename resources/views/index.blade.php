@@ -81,8 +81,9 @@
                
                
            </a>
+           أو
            <a href="{{ route('login') }}">
-               <span style="color:red">أو تسجيل الدخول</span>
+               <span style="color:red"> تسجيل الدخول</span>
            </a>
         </p>
     </dir>
