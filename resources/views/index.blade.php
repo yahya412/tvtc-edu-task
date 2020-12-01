@@ -75,8 +75,15 @@
         <h2 class="h2styles">يسرني دعوتكم لحضور زواجي</h2>
         <p class="h2styles">
            تعليقاتكم تعني لي الكثير .
-           الرجاء <a href="{{ route('register') }}">التسجيل</a>
-           <a href="{{ route('login') }}">او تسجيل الدخول</a>
+           الرجاء 
+           <a href="{{ route('register') }}">
+               <span style="color:red">التسجيل</span>
+               
+               
+           </a>
+           <a href="{{ route('login') }}">
+               <span style="color:red">أو تسجيل الدخول</span>
+           </a>
         </p>
     </dir>
 
