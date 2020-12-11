@@ -57,3 +57,4 @@ Route::get('new',function(){
 });
 Route::get('login/facebook', [FacebookController::class, 'redirectToProvider']);
 Route::get('login/facebook/callback', [FacebookController::class, 'handleProviderCallback']);
+Route::get('/post/{id}',[postController::class,'show'])->name('show');

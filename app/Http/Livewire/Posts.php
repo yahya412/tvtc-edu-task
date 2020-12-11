@@ -23,6 +23,7 @@ class Posts extends Component {
     public $userPostname;
     public $postId;
     public $idPost;
+    public $comment;
 
 //    public function updated($field) {
 //        $this->validateOnly($field, ['titlePost' => 'required|max:255']);
@@ -40,6 +41,12 @@ class Posts extends Component {
 //        }
 //    }
 //    
+    public function comment($postId) {
+        $this->post = Post::find($postId);
+        $this->userPost = Auth::id();
+        dd($post);
+    }
+
     public function addPost() {
         $this->userPost = Auth::id();
         $this->validate(['titlePost' => 'required|max:255',
@@ -48,10 +55,9 @@ class Posts extends Component {
 
 
         $post = [
-        
-        'title' => $this->titlePost,
-        'body' => $this->bodyPost,
-        'user_id' => $this->userPost,
+            'title' => $this->titlePost,
+            'body' => $this->bodyPost,
+            'user_id' => $this->userPost,
         ];
 
 
@@ -59,7 +65,7 @@ class Posts extends Component {
 //            dd($this->post);
             Post::find($this->post->id)
                     ->update($post);
-           session()->flash('message', 'Post updated successfully');
+            session()->flash('message', 'Post updated successfully');
         } else {
             Post::create($post);
             session()->flash('message', 'Post added successfully');
@@ -72,7 +78,6 @@ class Posts extends Component {
 //        ]);
         $this->titlePost = '';
         $this->bodyPost = '';
-        
     }
 
     public function updateorcreate($postId) {
@@ -99,7 +104,7 @@ class Posts extends Component {
 
     public function edit($postId) {
         $this->post = Post::find($postId);
-        
+
         $this->titlePost = $this->post->title;
         $this->bodyPost = $this->post->body;
         $this->userPost = Auth::id();
@@ -107,8 +112,6 @@ class Posts extends Component {
 //        $post->title = $this->titlePost;
 //        $post->body = $this->bodyPost;
 //        $post->user_id = $this->userPost;
-        
-
 //        session()->flash('message', 'Post edited successfully');
     }
 
@@ -130,15 +133,19 @@ class Posts extends Component {
 //        return view('livewire.posts', [
 //            'posts' => Post::latest()->paginate(10),
 //        ]); 
-        $posts = DB::table('posts')->join('users', 'posts.user_id', '=', 'users.id')
+        $posts = DB::table('posts')
+                ->join('users', 'posts.user_id', '=', 'users.id')
                 ->where('users.gender', $gender->gender)
                 ->select('posts.*', 'users.name')
                 ->orderby('posts.created_at', 'desc')
                 ->paginate(10);
-//       dd($posts);
+                
+//       echo $this->titlePost;
+//        dd($posts);
         return view('livewire.posts', [
             'posts' => $posts,
         ]);
-    }
-
+        
+        
+   }
 }

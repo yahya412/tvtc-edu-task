@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Laravelista\Comments\Commenter;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -17,6 +18,7 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use Commenter;
 
     /**
      * The attributes that are mass assignable.
@@ -65,4 +67,5 @@ class User extends Authenticatable
      public function posts(){
         return $this->hasMany('App\Models\Post');
     }
+ 
 }

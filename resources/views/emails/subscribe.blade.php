@@ -3,7 +3,7 @@
 
 thank you for subscribing and well keep in touch soon!.
 
-@component('mail::button', ['url' => 'http://127.0.0.1:8000'])
+@component('mail::button', ['url' => 'https://yahyasblog.herokuapp.com/'])
 Home page
 @endcomponent
 

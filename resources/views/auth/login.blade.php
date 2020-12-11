@@ -16,7 +16,7 @@
             @csrf
 
             <div class="mt-4">
-                <x-jet-label for="national_id" value="User Name" />
+                <x-jet-label for="national_id" value="{{ __('National_id') }}" />
                 <x-jet-input id="national_id" class="block mt-1 w-full" type="text" name="national_id" :value="old('national_id')"  autofocus required />
             </div>
 

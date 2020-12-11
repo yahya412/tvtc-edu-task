@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+ 
+use App\Models\Post;
 
 class postController extends Controller
 {
@@ -44,8 +47,15 @@ class postController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        $post=Post::find($id);
+//        $user=User::Auth()->id
+        
+        if($post){
+//        dd($post);
+            return view('show', compact('post'));
+            
+        }
     }
 
     /**

@@ -4,12 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/var/www/html/myblog/resources/views/livewire/posts.blade.php</file>
-            <file>file:/var/www/html/myblog/resources/views/layouts/guest.blade.php</file>
-            <file>file:/var/www/html/myblog/config/app.php</file>
-            <file>file:/var/www/html/myblog/resources/views/layouts/app.blade.php</file>
-            <file>file:/var/www/html/myblog/public/app/css/styles.css</file>
-            <file>file:/var/www/html/myblog/resources/views/index.blade.php</file>
-            <file>file:/var/www/html/myblog/resources/views/dashboard.blade.php</file>
+            <file>file:/var/www/html/myblog/routes/web.php</file>
+            <file>file:/var/www/html/myblog/app/Http/Controllers/postController.php</file>
+            <file>file:/var/www/html/myblog/resources/views/show.blade.php</file>
         </group>
     </open-files>
 </project-private>

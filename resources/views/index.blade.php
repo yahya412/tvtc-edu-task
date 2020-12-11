@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Amanis Weeding Page</title>
+        <title>Yahya's Blog Page</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -71,8 +71,8 @@
         <!--Start of Greeting post-->
     <dir class="container">
         
-        <img src="/app/img/amani.jpeg" width="260" height="50" alt="post" class="text-wrap2">
-        <h2 class="h2styles">يسرني دعوتكم لحضور زواجي</h2>
+        <img src="/app/img/backend.jpg" width="350" height="600" alt="post" class="text-wrap2">
+        <h2 class="h2styles">الصفحه الرئيسيه  للنشر والتعليقات</h2>
         <p class="h2styles">
            تعليقاتكم تعني لي الكثير .
            الرجاء 
@@ -132,7 +132,6 @@
 
 
 
-
     <!-- Footer -->
 
     <footer class="footer" id="site-footer">
@@ -148,7 +147,7 @@
                                 <span class="short-line"></span>
                                 <span class="long-line"></span>
                             </div>
-                            <p class="heading-text">اللهم باركم لهما وبارك عليهما واجمع بينهما في خير
+                            <p class="heading-text">بعض وسائل التواصل الاجتماعي هي وسيله فقط للتواصل والبعض الاخر يعد طريقه اخرى للتواصل
                             </p>
                         </div>
                     </div>
